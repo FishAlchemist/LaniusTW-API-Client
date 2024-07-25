@@ -1,0 +1,15 @@
+[project]
+name = "laniustw-api-client"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic",
+    "httpx",
+]
+classifiers=[
+"Programming Language :: Python :: 3.10"
+]
+[tool.uv]
+dev-dependencies = []
