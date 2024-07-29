@@ -13,14 +13,18 @@ def test(identifier: uuid.UUID | None) -> httpx.Response:
 
 
 @validate_call
-def speech_recogn(speech_file: pathlib.Path) -> httpx.Response:
+def speech_recogn(speech_file: pathlib.Path | str) -> httpx.Response:
+    if isinstance(speech_file, str):
+        speech_file = pathlib.Path(speech_file)
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/speech_recognition"
     files = {"file": (speech_file.name, speech_file.open(mode="rb"))}
     return httpx.post(url=api_url, files=files, timeout=httpx.Timeout(10.0, read=None))
 
 
 @validate_call
-def image_recognition(file: pathlib.Path) -> httpx.Response:
+def image_recognition(file: pathlib.Path | str) -> httpx.Response:
+    if isinstance(file, str):
+        file = pathlib.Path(file)
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/Image_recognition"
     files = {"file": (file.name, file.open("rb"))}
     return httpx.post(url=api_url, files=files, timeout=httpx.Timeout(10.0, read=None))
