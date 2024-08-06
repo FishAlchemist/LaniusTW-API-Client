@@ -6,10 +6,9 @@ import pathlib
 
 
 @validate_call
-def test(identifier: uuid.UUID | None, token: str) -> httpx.Response:
-    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/test"
-    params = {"identifier": identifier, "token": token}
-    return httpx.get(url=api_url, params=params)
+def health_check(token: str) -> httpx.Response:
+    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/health"
+    return httpx.get(url=api_url, params={"token": token})
 
 
 @validate_call
@@ -49,12 +48,11 @@ def chat_RAG(question: str, identifier: uuid.UUID | None, token: str) -> httpx.R
 
 @validate_call
 def chat_Recommendation(
-    question: str, identifier: uuid.UUID | None, Recommended_num: int | None, token: str
+    question: str, Recommended_num: int | None, token: str
 ) -> httpx.Response:
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/Recommendation"
     params = {
         "question": question,
-        "identifier": identifier,
         "Recommended_num": Recommended_num,
         "token": token,
     }
