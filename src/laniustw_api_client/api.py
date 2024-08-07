@@ -16,7 +16,7 @@ def speech_recogn(speech_file: pathlib.Path | str, token: str) -> httpx.Response
     if isinstance(speech_file, str):
         speech_file = pathlib.Path(speech_file)
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/speech_recognition"
-    files = {"speech_file": (speech_file.name, speech_file.open(mode="rb"))}
+    files = {"speech_file": (speech_file.name, speech_file.read_bytes())}
     return httpx.post(
         url=api_url,
         files=files,
@@ -30,7 +30,7 @@ def image_recognition(file: pathlib.Path | str, token: str) -> httpx.Response:
     if isinstance(file, str):
         file = pathlib.Path(file)
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/Image_recognition"
-    files = {"file": (file.name, file.open("rb"))}
+    files = {"file": (file.name, file.read_bytes())}
     return httpx.post(
         url=api_url,
         files=files,
