@@ -132,8 +132,8 @@ wheels = [
 
 [[package]]
 name = "laniustw-api-client"
-version = "3.4.0"
-source = { virtual = "." }
+version = "3.5.0"
+source = { editable = "." }
 dependencies = [
     { name = "httpx" },
     { name = "pydantic" },
