@@ -10,7 +10,6 @@ model_type = typing.TypeVar("model_type")
 
 
 class ModelResponse(typing.Generic[model_type]):
-    @pydantic.validate_call
     def __init__(self, response: httpx.Response, result_type: model_type) -> None:
         super().__init__()
         self.response: httpx.Response = response
