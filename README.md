@@ -1,9 +1,9 @@
-# 專題API封裝Python庫
+# 專題API封裝Python庫 (當前實現Server 2.0 的 API 呼叫)
 
 ## Note: 該儲存庫可直接使用pip安裝。Packagge name為laniustw_api_client**
 
 ```bash
-pip install git+https://gitlab.com/LaniusTW_CSAI_114/LaniusTW_API_Client_Python.git@v3.3.0
+pip install git+https://gitlab.com/LaniusTW_CSAI_114/LaniusTW_API_Client_Python.git@v4.0.0
 ```
 
 ### Example
