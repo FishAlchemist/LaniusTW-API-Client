@@ -32,7 +32,9 @@ def health_check(token: str) -> ModelResponse[laniustw_model.response.HealthChec
 
 
 @pydantic.validate_call
-def integrate(Images: list[pathlib.Path], speech_file: pathlib.Path, token: str) -> str:
+def integrate(
+    Images: list[pathlib.Path], speech_file: pathlib.Path, token: str
+) -> ModelResponse[str]:
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/Integrate"
     files = [("Images", (image.name, image.read_bytes())) for image in Images]
     files.append(("speech_file", (speech_file.name, speech_file.read_bytes())))
@@ -58,7 +60,9 @@ def chat_RAG(
 
 
 @pydantic.validate_call
-def chat_Experience(question: str, identifier: uuid.UUID | None, token: str):
+def chat_Experience(
+    question: str, identifier: uuid.UUID | None, token: str
+) -> ModelResponse[laniustw_model.response.ChatResponse[uuid.UUID]]:
     api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/Experience"
     params = {"question": question, "identifier": identifier, "token": token}
     response = httpx.get(
