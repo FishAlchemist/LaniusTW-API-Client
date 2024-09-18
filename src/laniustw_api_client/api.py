@@ -39,8 +39,8 @@ def integrate(
     files = [("Images", (image.name, image.read_bytes())) for image in Images]
     files.append(("speech_file", (speech_file.name, speech_file.read_bytes())))
     params = {"token": token}
-    response = httpx.get(
-        url=api_url, params=params, timeout=httpx.Timeout(20.0, read=None)
+    response = httpx.post(
+        url=api_url, params=params, timeout=httpx.Timeout(20.0, read=None), files=files
     )
     return ModelResponse[str](response=response, result_type=str)
 
