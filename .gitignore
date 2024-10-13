@@ -161,3 +161,4 @@ cython_debug/
 version_file.txt
 .syzygy_token
 upload_package.ps1
+test_example
