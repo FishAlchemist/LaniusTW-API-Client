@@ -35,7 +35,7 @@ def health_check(token: str) -> ModelResponse[laniustw_model.response.HealthChec
 def integrate(
     Images: list[pathlib.Path], speech_file: pathlib.Path, token: str
 ) -> ModelResponse[str]:
-    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/Integrate"
+    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/integrate"
     files = [("Images", (image.name, image.read_bytes())) for image in Images]
     files.append(("speech_file", (speech_file.name, speech_file.read_bytes())))
     params = {"token": token}
@@ -46,10 +46,10 @@ def integrate(
 
 
 @pydantic.validate_call
-def chat_RAG(
+def chat_professional(
     question: str, identifier: uuid.UUID | None, token: str
 ) -> ModelResponse[laniustw_model.response.ChatResponse[uuid.UUID]]:
-    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/RAG"
+    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/professional"
     params = {"question": question, "identifier": identifier, "token": token}
     response = httpx.get(
         url=api_url, params=params, timeout=httpx.Timeout(10.0, read=None)
@@ -60,10 +60,10 @@ def chat_RAG(
 
 
 @pydantic.validate_call
-def chat_Experience(
+def chat_experience(
     question: str, identifier: uuid.UUID | None, token: str
 ) -> ModelResponse[laniustw_model.response.ChatResponse[uuid.UUID]]:
-    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/Experience"
+    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/experience"
     params = {"question": question, "identifier": identifier, "token": token}
     response = httpx.get(
         url=api_url, params=params, timeout=httpx.Timeout(10.0, read=None)
@@ -71,3 +71,13 @@ def chat_Experience(
     return ModelResponse[laniustw_model.response.ChatResponse[uuid.UUID]](
         response=response, result_type=laniustw_model.response.ChatResponse[uuid.UUID]
     )
+
+
+@pydantic.validate_call
+def chat_boot(question: str, token: str) -> ModelResponse[str]:
+    api_url = f"{laniustw_api_client.PROJECT_API_URL}/api/chat/boot"
+    params = {"question": question, "token": token}
+    response = httpx.get(
+        url=api_url, params=params, timeout=httpx.Timeout(10.0, read=None)
+    )
+    return ModelResponse[str](response=response, result_type=str)
