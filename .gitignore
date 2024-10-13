@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 version_file.txt
 .syzygy_token
+upload_package.ps1
