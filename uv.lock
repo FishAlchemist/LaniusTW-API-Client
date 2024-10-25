@@ -16,7 +16,7 @@ wheels = [
 
 [[package]]
 name = "anyio"
-version = "4.6.0"
+version = "4.6.2.post1"
 source = { registry = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/simple" }
 dependencies = [
     { name = "exceptiongroup", marker = "python_full_version < '3.11'" },
@@ -24,9 +24,9 @@ dependencies = [
     { name = "sniffio" },
     { name = "typing-extensions", marker = "python_full_version < '3.11'" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/78/49/f3f17ec11c4a91fe79275c426658e509b07547f874b14c1a526d86a83fc8/anyio-4.6.0.tar.gz", hash = "sha256:137b4559cbb034c477165047febb6ff83f390fc3b20bf181c1fc0a728cb8beeb", size = 170983 }
+sdist = { url = "https://files.pythonhosted.org/packages/9f/09/45b9b7a6d4e45c6bcb5bf61d19e3ab87df68e0601fa8c5293de3542546cc/anyio-4.6.2.post1.tar.gz", hash = "sha256:4c8bc31ccdb51c7f7bd251f51c609e038d63e34219b44aa86e47576389880b4c", size = 173422 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/9e/ef/7a4f225581a0d7886ea28359179cb861d7fbcdefad29663fc1167b86f69f/anyio-4.6.0-py3-none-any.whl", hash = "sha256:c7d2e9d63e31599eeb636c8c5c03a7e108d73b345f064f1c19fdc87b79036a9a", size = 89631 },
+    { url = "https://files.pythonhosted.org/packages/e4/f5/f2b75d2fc6f1a260f340f0e7c6a060f4dd2961cc16884ed851b0d18da06a/anyio-4.6.2.post1-py3-none-any.whl", hash = "sha256:6d170c36fba3bdd840c73d3868c1e777e33676a69c3a72cf0a0d5d6d8009b61d", size = 90377 },
 ]
 
 [[package]]
@@ -148,7 +148,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.27.2" },
-    { name = "laniustw-model", specifier = ">=0.3.0" },
+    { name = "laniustw-model", specifier = ">=1.0.0" },
     { name = "pydantic", specifier = ">=2.9.0" },
 ]
 
@@ -157,14 +157,14 @@ dev = [{ name = "pre-commit", specifier = ">=3.8.0" }]
 
 [[package]]
 name = "laniustw-model"
-version = "0.3.0"
+version = "1.0.0"
 source = { registry = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/simple" }
 dependencies = [
     { name = "pydantic" },
 ]
-sdist = { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/463ee66bcb8f4bfd3a6434844ff470031c83b59a8e7fd4c4a95157df903655f8/laniustw_model-0.3.0.tar.gz", hash = "sha256:463ee66bcb8f4bfd3a6434844ff470031c83b59a8e7fd4c4a95157df903655f8" }
+sdist = { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/766791ba32f72426b98004e0065bd902ec917990dab884ee437865b9e7ee4f9e/laniustw_model-1.0.0.tar.gz", hash = "sha256:766791ba32f72426b98004e0065bd902ec917990dab884ee437865b9e7ee4f9e" }
 wheels = [
-    { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/f3c8c01a02e276621d420a2878f226a271a83eb38012270e310c37263c3b9d40/laniustw_model-0.3.0-py3-none-any.whl", hash = "sha256:f3c8c01a02e276621d420a2878f226a271a83eb38012270e310c37263c3b9d40" },
+    { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/01491e5fec0b70cda239e84f588bf9c502be2d31fe3bb204480e494b4c88293a/laniustw_model-1.0.0-py3-none-any.whl", hash = "sha256:01491e5fec0b70cda239e84f588bf9c502be2d31fe3bb204480e494b4c88293a" },
 ]
 
 [[package]]
@@ -346,14 +346,14 @@ wheels = [
 
 [[package]]
 name = "virtualenv"
-version = "20.26.6"
+version = "20.27.0"
 source = { registry = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/simple" }
 dependencies = [
     { name = "distlib" },
     { name = "filelock" },
     { name = "platformdirs" },
 ]
-sdist = { url = "https://files.pythonhosted.org/packages/3f/40/abc5a766da6b0b2457f819feab8e9203cbeae29327bd241359f866a3da9d/virtualenv-20.26.6.tar.gz", hash = "sha256:280aede09a2a5c317e409a00102e7077c6432c5a38f0ef938e643805a7ad2c48", size = 9372482 }
+sdist = { url = "https://files.pythonhosted.org/packages/10/7f/192dd6ab6d91ebea7adf6c030eaf549b1ec0badda9f67a77b633602f66ac/virtualenv-20.27.0.tar.gz", hash = "sha256:2ca56a68ed615b8fe4326d11a0dca5dfbe8fd68510fb6c6349163bed3c15f2b2", size = 6483858 }
 wheels = [
-    { url = "https://files.pythonhosted.org/packages/59/90/57b8ac0c8a231545adc7698c64c5a36fa7cd8e376c691b9bde877269f2eb/virtualenv-20.26.6-py3-none-any.whl", hash = "sha256:7345cc5b25405607a624d8418154577459c3e0277f5466dd79c49d5e492995f2", size = 5999862 },
+    { url = "https://files.pythonhosted.org/packages/c8/15/828ec11907aee2349a9342fa71fba4ba7f3af938162a382dd7da339dea16/virtualenv-20.27.0-py3-none-any.whl", hash = "sha256:44a72c29cceb0ee08f300b314848c86e57bf8d1f13107a5e671fb9274138d655", size = 3110969 },
 ]
