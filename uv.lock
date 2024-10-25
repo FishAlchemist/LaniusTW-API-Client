@@ -137,6 +137,7 @@ source = { editable = "." }
 dependencies = [
     { name = "httpx" },
     { name = "laniustw-model" },
+    { name = "packaging" },
     { name = "pydantic" },
 ]
 
@@ -149,6 +150,7 @@ dev = [
 requires-dist = [
     { name = "httpx", specifier = ">=0.27.2" },
     { name = "laniustw-model", specifier = ">=1.0.0" },
+    { name = "packaging" },
     { name = "pydantic", specifier = ">=2.9.0" },
 ]
 
@@ -174,6 +176,15 @@ source = { registry = "https://gitlab.com/api/v4/projects/61310914/packages/pypi
 sdist = { url = "https://files.pythonhosted.org/packages/43/16/fc88b08840de0e0a72a2f9d8c6bae36be573e475a6326ae854bcc549fc45/nodeenv-1.9.1.tar.gz", hash = "sha256:6ec12890a2dab7946721edbfbcd91f3319c6ccc9aec47be7c7e6b7011ee6645f", size = 47437 }
 wheels = [
     { url = "https://files.pythonhosted.org/packages/d2/1d/1b658dbd2b9fa9c4c9f32accbfc0205d532c8c6194dc0f2a4c0428e7128a/nodeenv-1.9.1-py2.py3-none-any.whl", hash = "sha256:ba11c9782d29c27c70ffbdda2d7415098754709be8a7056d79a737cd901155c9", size = 22314 },
+]
+
+[[package]]
+name = "packaging"
+version = "24.1"
+source = { registry = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/simple" }
+sdist = { url = "https://files.pythonhosted.org/packages/51/65/50db4dda066951078f0a96cf12f4b9ada6e4b811516bf0262c0f4f7064d4/packaging-24.1.tar.gz", hash = "sha256:026ed72c8ed3fcce5bf8950572258698927fd1dbda10a5e981cdf0ac37f4f002", size = 148788 }
+wheels = [
+    { url = "https://files.pythonhosted.org/packages/08/aa/cc0199a5f0ad350994d660967a8efb233fe0416e4639146c089643407ce6/packaging-24.1-py3-none-any.whl", hash = "sha256:5b8f2217dbdbd2f7f384c41c628544e6d52f2d0f53c6d0c3ea61aa5d1d7ff124", size = 53985 },
 ]
 
 [[package]]
