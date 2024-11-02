@@ -132,7 +132,7 @@ wheels = [
 
 [[package]]
 name = "laniustw-api-client"
-version = "6.0.0"
+version = "6.1.0"
 source = { editable = "." }
 dependencies = [
     { name = "httpx" },
@@ -149,7 +149,7 @@ dev = [
 [package.metadata]
 requires-dist = [
     { name = "httpx", specifier = ">=0.27.2" },
-    { name = "laniustw-model", specifier = ">=1.0.0" },
+    { name = "laniustw-model", specifier = ">=1.1.0" },
     { name = "packaging" },
     { name = "pydantic", specifier = ">=2.9.0" },
 ]
@@ -159,14 +159,14 @@ dev = [{ name = "pre-commit", specifier = ">=4.0.1" }]
 
 [[package]]
 name = "laniustw-model"
-version = "1.0.0"
+version = "1.1.0"
 source = { registry = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/simple" }
 dependencies = [
     { name = "pydantic" },
 ]
-sdist = { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/766791ba32f72426b98004e0065bd902ec917990dab884ee437865b9e7ee4f9e/laniustw_model-1.0.0.tar.gz", hash = "sha256:766791ba32f72426b98004e0065bd902ec917990dab884ee437865b9e7ee4f9e" }
+sdist = { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/e337d48dc43a6df9d9637034c0720fad4bbeb50e32356741f8292e99c0c101f3/laniustw_model-1.1.0.tar.gz", hash = "sha256:e337d48dc43a6df9d9637034c0720fad4bbeb50e32356741f8292e99c0c101f3" }
 wheels = [
-    { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/01491e5fec0b70cda239e84f588bf9c502be2d31fe3bb204480e494b4c88293a/laniustw_model-1.0.0-py3-none-any.whl", hash = "sha256:01491e5fec0b70cda239e84f588bf9c502be2d31fe3bb204480e494b4c88293a" },
+    { url = "https://gitlab.com/api/v4/projects/61310914/packages/pypi/files/9f02ce464fddd16843180248d59cf0f99f0711df763da81500dc8857556177df/laniustw_model-1.1.0-py3-none-any.whl", hash = "sha256:9f02ce464fddd16843180248d59cf0f99f0711df763da81500dc8857556177df" },
 ]
 
 [[package]]
