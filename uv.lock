@@ -155,7 +155,7 @@ requires-dist = [
 ]
 
 [package.metadata.requires-dev]
-dev = [{ name = "pre-commit", specifier = ">=3.8.0" }]
+dev = [{ name = "pre-commit", specifier = ">=4.0.1" }]
 
 [[package]]
 name = "laniustw-model"
