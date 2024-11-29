@@ -45,7 +45,7 @@ def speech_recogn(speech_file: pathlib.Path, token: str):
 @pydantic.validate_call
 def image_recognition(image: pathlib.Path, token: str):
     API_URL = f"{laniustw_api_client.PROJECT_API_URL}/api/image-recogn"
-    files = [("Images", (image.name, image.read_bytes()))]
+    files = [("images", (image.name, image.read_bytes()))]
     params = {"token": token}
     response = httpx.post(
         url=API_URL, params=params, timeout=httpx.Timeout(20.0, read=None), files=files
