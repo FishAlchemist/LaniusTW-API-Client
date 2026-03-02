@@ -67,12 +67,12 @@ print(respond.result)
 
 本系列專案由三個獨立模組組成，涵蓋了從後端邏輯、通訊封裝到前端 UI 的完整開發鏈結：
 
-- **[Laniustw Project Demo] Desktop GUI** (本Repo)
+- **[Laniustw Project Demo] Desktop GUI**
   - **定位**：基於 customtkinter 開發的桌面圖形客戶端。
   - **職責**：提供直觀的操作介面，透過 HTTP API Library 與後端進行互動。
   - **Repository**: [GitHub Link](https://github.com/FishAlchemist/Laniustw-Project-Demo)
 
-- **[LaniusTW API Client] HTTP API Library**
+- **[LaniusTW API Client] HTTP API Library** (本Repo)
   - **定位**：與Server通訊的封裝，避免在GUI部分，額外關注和Server的通訊細節。
   - **職責**：標準化 HTTP 請求流程、處理序列化與錯誤機制，供 GUI 使用。
   - **Repository**: [GitHub Link](https://github.com/FishAlchemist/LaniusTW-API-Client)
@@ -84,4 +84,5 @@ print(respond.result)
 
 **運作機制：**
 使用者在 **Desktop GUI** 觸發動作 → 呼叫 **API Library** 的方法 → 發送請求至 **Core Server** 執行邏輯並回傳結果。
+
 
